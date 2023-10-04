@@ -1,5 +1,4 @@
 import React from 'react';
-import { toast } from 'react-toastify';
 
 const Color = ({ item, index, handleCopyToClipboard }) => {
   const hex = item.hexString();

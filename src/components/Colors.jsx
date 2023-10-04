@@ -1,5 +1,4 @@
 import React from 'react';
-import Values from 'values.js';
 import Color from './Color';
 
 const Colors = ({ colors, handleCopyToClipboard }) => {
