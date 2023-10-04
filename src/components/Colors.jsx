@@ -1,5 +1,6 @@
 import React from 'react';
 import Color from './Color';
+import { nanoid } from 'nanoid';
 
 const Colors = ({ colors, handleCopyToClipboard }) => {
   return (
@@ -7,7 +8,7 @@ const Colors = ({ colors, handleCopyToClipboard }) => {
       {colors.map((item, index) => {
         return (
           <Color
-            key={index}
+            key={nanoid()}
             item={item}
             index={index}
             handleCopyToClipboard={handleCopyToClipboard}

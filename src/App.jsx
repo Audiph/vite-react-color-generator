@@ -19,8 +19,16 @@ const App = () => {
   };
 
   const handleCopyToClipboard = (hex) => {
-    navigator.clipboard.writeText(hex);
-    toast.success('Color copied to clipboard');
+    if (navigator.clipboard) {
+      try {
+        navigator.clipboard.writeText(`#${hex}`);
+        toast.success('Color copied to clipboard');
+      } catch (error) {
+        toast.error('Failed to copy color to clipboard');
+      }
+    } else {
+      toast.error('Clipboard access not available');
+    }
   };
   return (
     <main>
